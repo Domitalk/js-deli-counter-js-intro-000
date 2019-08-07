@@ -11,3 +11,14 @@ function nowServing(katzDeliLine) {
     return ("Currently serving " + katzDeliLine.shift() + ".")
   }
 }
+
+function currentLine(katzDeliLine) {
+  var lineLong
+  if (katzDeliLine.length === 0) {
+    return `The line is currently empty.`;
+  }
+  for (var i = 0; i < katzDeliLine.length; i++) {
+    lineLong.push(`${i+1}. ${katzDeliLine[i]}`);
+  }
+  return "The line is currently:" + lineLong;
+}
